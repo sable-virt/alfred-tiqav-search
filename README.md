@@ -1,6 +1,6 @@
-# alfred-tiqav-search
+# alfred-tiqav-search (v0.0.1)
 
-Alfred Tiqav search workflow.
+Alfred Tiqav search workflow.  
 
 ちくわぶ検索をAlfred2で行うWorkflowです。
 
@@ -19,3 +19,8 @@ Alfred Tiqav search workflow.
 
 検索にはtiqav API を利用しています  
 [http://dev.tiqav.com/](http://dev.tiqav.com/)
+
+## Change log
+
+- version 0.0.2 - 日本語での検索精度が悪かったのを修正
+- version 0.0.1 - 公開
