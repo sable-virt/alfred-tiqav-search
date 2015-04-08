@@ -1,4 +1,4 @@
-# alfred-tiqav-search (v0.0.1)
+# alfred-tiqav-search (v0.0.3)
 
 Alfred Tiqav search workflow.  
 
@@ -22,5 +22,14 @@ Alfred Tiqav search workflow.
 
 ## Change log
 
+- version 0.0.3 - キャッシュを残すようにして高速化。キャッシュファイルが溢れる不具合の修正。
 - version 0.0.2 - 日本語での検索精度が悪かったのを修正
 - version 0.0.1 - 公開
+
+## version0.02以下のキャッシュを削除する方法
+
+version0.0.1-0.0.2でキャッシュが残ってしまう不具合があったので、キャッシュファイルを削除する場合は以下のコマンドを使用してください。
+
+```
+rm -r ~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow\ Data/com.alfredapp.frontainer.tiqav*jpg
+```

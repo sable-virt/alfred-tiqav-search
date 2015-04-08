@@ -2,6 +2,7 @@
 require_once('./workflows.php');
 $wf = new Workflows();
 
+$orig = 'test';
 define('API_PATH','http://api.tiqav.com/search.json?q=');
 
 $req = $wf->request(API_PATH.$orig);
@@ -9,14 +10,21 @@ $content = json_decode($req);
 
 $int = 1;
 $cache = $wf->cache();
+//$shell_cache = str_replace(' ','\ ',$cache);
+//exec("rm -r $shell_cache*jpg");
+
 foreach( $content as $val ):
+	if ($int === 10) break;
 	$id = $val->id;
 	$ext = $val->ext;
 	$src = "http://img.tiqav.com/$id.th.jpg";
-	$data = $wf->request($src);
-	$icon = $cache.$id.'jpg';
 	$query = "http://img.tiqav.com/$id.$ext";
-	file_put_contents($icon, $data);
+	$icon = "$cache/$id.jpg";
+	
+	if (!file_exists($icon)) {
+		$data = $wf->request($src);
+		file_put_contents($icon, $data);
+	}
 	$wf->result($int.':'.time(), $query, $int.':'.$src, $src, $icon);
 	$int++;
 endforeach;
