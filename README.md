@@ -1,4 +1,4 @@
-# alfred-tiqav-search (v0.0.3)
+# alfred-tiqav-search (v0.0.4)
 
 Alfred Tiqav search workflow.  
 
@@ -22,6 +22,7 @@ Alfred Tiqav search workflow.
 
 ## Change log
 
+- version 0.0.4 - 常に同じ結果しか表示されない不具合の修正
 - version 0.0.3 - キャッシュを残すようにして高速化。キャッシュファイルが溢れる不具合の修正。
 - version 0.0.2 - 日本語での検索精度が悪かったのを修正
 - version 0.0.1 - 公開
