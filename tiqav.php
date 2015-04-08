@@ -2,7 +2,6 @@
 require_once('./workflows.php');
 $wf = new Workflows();
 
-$orig = 'test';
 define('API_PATH','http://api.tiqav.com/search.json?q=');
 
 $req = $wf->request(API_PATH.$orig);
